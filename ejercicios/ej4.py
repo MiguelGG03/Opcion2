@@ -41,3 +41,6 @@ def main4():
     else:
         print('Opcion no valida')
         main4()
+
+if __name__ == '__main__':
+    main4()
