@@ -24,3 +24,20 @@ def fibonacci_recursivo(n):
         return fibonacci_recursivo(n-1) + fibonacci_recursivo(n-2)
 
 # Sacado de https://www.linuxhispano.net/2013/08/07/fibonacci-recursivo-python/
+
+def main4():
+    pr1= input('De que marea quieres la secuencia de Fibonacci?\n'
+               '1. Iterativa\n'
+               '2. Recursiva\n'
+               '>>>')
+    if pr1 == '1':
+        pr2 = int(input('Hasta que numero quieres la secuencia?\n'
+                        '>>>'))
+        print(fibonacci_iterativo(pr2))
+    elif pr1 == '2':
+        pr2 = int(input('Hasta que numero quieres la secuencia?\n'
+                        '>>>'))
+        print(fibonacci_recursivo(pr2))
+    else:
+        print('Opcion no valida')
+        main4()
