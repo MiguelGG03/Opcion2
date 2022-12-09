@@ -25,10 +25,18 @@ def fibonacci_recursivo(n):
 
 # Sacado de https://www.linuxhispano.net/2013/08/07/fibonacci-recursivo-python/
 
+def fib(n):
+    a, b = 0,1
+    while a < n:
+        print(a, end=' ')
+        a, b = b, a+b
+    print()
+
 def main4():
     pr1= input('De que marea quieres la secuencia de Fibonacci?\n'
                '1. Iterativa\n'
                '2. Recursiva\n'
+               '3. Fibonacci\n'
                '>>>')
     if pr1 == '1':
         pr2 = int(input('Hasta que numero quieres la secuencia?\n'
@@ -38,6 +46,10 @@ def main4():
         pr2 = int(input('Hasta que numero quieres la secuencia?\n'
                         '>>>'))
         print(fibonacci_recursivo(pr2))
+    elif pr1 == '3':
+        pr2 = int(input('Hasta que numero quieres la secuencia?\n'
+                        '>>>'))
+        fib(pr2)
     else:
         print('Opcion no valida')
         main4()
