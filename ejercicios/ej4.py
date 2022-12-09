@@ -14,3 +14,13 @@ def fibonacci_iterativo(n):
         return c
 
 # Sacado de https://www.programiz.com/python-programming/examples/fibonacci-sequence
+
+def fibonacci_recursivo(n):
+    if n == 0:
+        return 0
+    elif n == 1:
+        return 1
+    else:
+        return fibonacci_recursivo(n-1) + fibonacci_recursivo(n-2)
+
+# Sacado de https://www.linuxhispano.net/2013/08/07/fibonacci-recursivo-python/
