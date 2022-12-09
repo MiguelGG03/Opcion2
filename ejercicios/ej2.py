@@ -9,12 +9,17 @@ def expand(func:str):
             marc2=i
         elif func[i]=='^':
             marc3=func[i+1:]
-    for i in range(len(func)):
-        if func[i] == '^':
-            func = func[:i] + '**' + func[i+1:]
+    for i in range(marc1+1,marc2):
+        try:
+            termino_numerico=int(func[i])
+        except:
+            pass
+        
+    
     print(marc1)
     print(marc2)
     print(marc3)
+    print(termino_numerico)
 
 def main2():
     pr1 = input('Que funcion quieres expandir?\n'
