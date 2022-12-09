@@ -1,7 +1,10 @@
 # Binomio de newton iterativo
 
 
-def binomio_newton_iterativo(n, k):
+def expand(func:str):
+    for i in range(len(func)):
+        if func[i] == '^':
+            func = func[:i] + '**' + func[i+1:]
     if n == k:
         return 1
     elif k == 0:
@@ -15,3 +18,10 @@ def binomio_newton_iterativo(n, k):
             b = c
         return c
 
+def main2():
+    print('Sabiendo que ')
+    n = int(input('Dame el valor de n\n'
+                    '>>>'))
+    k = int(input('Dame el valor de k\n'
+                    '>>>'))
+    print(binomio_newton_iterativo(n, k))
